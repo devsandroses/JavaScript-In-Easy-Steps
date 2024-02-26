@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src='external.js'></script>
+    <script>
+letmyName = 'Internal Script'
+function getName(){
+    console.log(myName)
+}
+getName()
+
+function readName(){
+    let myName = "External Script"; console.log(myName)
+}
+function getName(){
+    let myName = "Internal Script"; console.log(myName)
+}
+    </script>
+</body>
+</html>
