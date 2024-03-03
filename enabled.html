@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Status</title>
+</head>
+<body>
+
+<p id="info"></p>
+
+    <script>
+
+const info = document.getElementById('info')
+let status = ''
+status = (navigator.javaEnabled()) ? 'enabled' : 'disabled'
+info.innerHTML += 'Java support is ' + status + '<hr>'
+status = (navigator.cookieEnabled) ? 'enabled' : 'disabled'
+info.innerHTML += 'Cookie support is ' + status + '<hr>'
+        if(navigator.plugins.length !== 0){
+            info.innerHTML += 'No. of plugins: ' + navigator.plugins.length
+            info.innerHTML += '<br>Example: ' + navigator.plugins[0].name
+            info.innerHTML += '<br>For: ' + navigator.plugins[0].description + '<hr>'
+        }
+        if(navigator.mimeTypes.length !== 0){
+            info.innerHTML += 'No. of mime types: ' + navigator.mimeTypes.length
+            info.innerHTML += '<br>Example: ' + navigator.mimeTypes[1].type
+            info.innerHTML += '<br>For: ' + navigator.mimeTypes[1].description + '<hr>'
+        }
+
+
+    </script>
+</body>
+</html>
