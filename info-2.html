@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Info</title>
+</head>
+<body>
+    
+    <ul id="list"></ul>
+
+    <script>
+
+        const list = document.getElementById('list')
+        list.innerHTML = '<li>Linked from: ' + document.referrer
+        list.innerHTML += '<li>Title : ' + document.title
+        list.innerHTML += '<li>URL: ' + document.URL
+        list.innerHTML += '<li>Domain: ' + document.domain
+        list.innerHTML += '<li>Last modified: ' + document.lastModified
+
+    </script>
+</body>
+</html>

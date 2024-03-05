@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Boxes</title>
+</head>
+<body>
+    <form id="pizza" action="echo.pl" method="post">
+        <fieldset>
+            <legend>Select Pizza Toppings</legend>
+            <input type="checkbox" name="Top" value="Cheese">Cheese
+            <input type="checkbox" name="Top" value="Pepperoni ">Pepperoni
+            <input type="checkbox" name="Top" value="Veggies ">Veggies
+        </fieldset>
+        <input type="submit">
+    </form>
+    <script>
+        (function(){
+            const form=document.getElementById('pizza')
+            form.addEventListener('submit', function(event){reactTo(form,event)})
+            form.Top[0].checked = true
+        })()
+        function reactTo(form, event){
+            let i, ok, summary = ''
+            for(i=1;i<form.Top.length;i++){
+                if(form.Top[i].checked){
+                    summary += form.Top[i].value + ''
+                }
+            }
+            ok=confirm('Submit these choices?\n' + summary)
+            if(!ok){event.preventDefault()}
+        }
+    </script>
+</body>
+</html>

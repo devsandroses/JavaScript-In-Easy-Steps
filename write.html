@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Conetent</title>
+</head>
+<body>
+    <h1 id="Heading">Top 3 Animals</h1>
+    <ol id="list">
+        <li>Golden Retriever</li>
+        <li>Maine Coon</li>
+        <li>Humming Birds</li>
+    </ol>
+
+    <script>
+        const itemFour=document.createElement('li')
+        const itemFive=document.createElement('li')
+        const heading=document.getElementById('heading')
+        itemFour.innerText='Dragon Fly'
+        itemFive.innerText='Butterfly'
+        document.getElementById('list').appendChild(itemFour)
+        document.getElementById('list').appendChild(itemFive)
+        heading.innerText='Top 5 Animals'
+        heading.setAttribute('style','color: Red')
+    </script>
+    
+</body>
+</html>
